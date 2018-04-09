@@ -1,3 +1,5 @@
-*.txt
+CPython.txt
+Jython.txt
+PyPy.txt
 *.pyc
 venv/
