@@ -3,7 +3,7 @@ import numpy as np
 
 from subprocess import call
 
-def main():
+def cpu_bound_test():
     # CPython
     print "CPython interpreter running..."
     cpython_log = open("CPython.txt", "w")
@@ -20,7 +20,8 @@ def main():
     call(["pypy", "cpu-bound-test.py"], stdout=pypy_log)
 
 if __name__ == "__main__":
-    main()
+    # CPU bound test
+    cpu_bound_test()
     cpython_result = np.loadtxt("CPython.txt")
     jython_result = np.loadtxt("Jython.txt")
     pypy_result = np.loadtxt("PyPy.txt")
